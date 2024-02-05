@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #0D0D0D;
+    --secondary-color: #401506;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo img {
+    opacity: 0;
+    transition: .3s;
+}
+
+.logo img:hover {
+    opacity: 1;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    animation: allanz-right 2s ease forwards;
+}
+
+.navbar a {
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .10s;
+}
+
+.navbar a:nth-child(1):hover {
+    color: #090217;
+}
+
+.navbar a:nth-child(2):hover {
+    color: #A60303;
+}
+
+.navbar a:nth-child(3):hover {
+    color: #4B4A59;
+}
+
+.navbar a:nth-child(4):hover {
+    color: #8C5637;
+}
+
+.home {
+    height: 100vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    padding: 20px;
+    max-width: 100vh;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    animation: allanz-right 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-content h2 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    color: #00ffff;
+    line-height: 2;
+}
+
+.home-content h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    animation: allanz-right 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    color: #545467;
+    line-height: 1.2;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    animation: allanz-right 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    animation: allanz-right 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #A60303;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #A60303;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: var(--primary-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #A60303;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.imgs img {
+    width: 50vh;
+    height: 50vh;
+    margin-left: 30vh;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+    opacity: .3;
+    transition: .5s;
+}
+
+.imgs img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--secondary-color);
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.heading {
+    font-size: 5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+span {
+    color: var(--primary-color);
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .3rem solid var(--primary-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--primary-color);
+    border-left: .2rem solid var(--secondary-color);
+    border-bottom: .2rem solid var(--primary-color);
+    border-right: .2rem solid var(--secondary-color);
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.about-content-types {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about-content-types .frontend {
+    width: 300px;
+    height: auto;
+    background: var(--primary-color);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+
+.about-content-types .game-developer {
+    width: 800px;
+    height: auto;
+    background: var(--primary-color);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+
+
+
+/* animation area */
+@keyframes allanz-right {
+    100% {
+        width: 0;
+    }
+}
